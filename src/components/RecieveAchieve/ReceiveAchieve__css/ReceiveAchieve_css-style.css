@@ -1,0 +1,85 @@
+.app__receive-achieve {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 320px;
+  height: 128px;
+  background: #0092ff;
+  position: fixed;
+  bottom: 8px;
+  right: 8px;
+  border-radius: 8px;
+  right: -320px;
+  -webkit-animation: slide 0.5s forwards;
+          animation: slide 0.5s forwards;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.app__receive-achieve-img {
+  width: 72px;
+  height: 72px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #e9f0fb;
+  border-radius: 8px;
+  margin-left: 16px;
+}
+
+.app__receive-achieve-img img {
+  width: 80%;
+}
+
+.app__receive-achieve-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 200px;
+  height: 100%;
+  margin-left: 8px;
+  color: #ffffff;
+}
+
+.receive-achieve-info__title {
+  font-weight: 600;
+  margin-top: 16px;
+}
+
+.receive-achieve-info__desc {
+  min-width: 200px;
+  overflow: hidden;
+  word-wrap: none;
+  margin-top: 16px;
+  height: 36px;
+}
+
+body {
+  overflow: hidden;
+}
+
+@-webkit-keyframes slide {
+  100% {
+    right: 8px;
+  }
+}
+
+@keyframes slide {
+  100% {
+    right: 8px;
+  }
+}
+/*# sourceMappingURL=ReceiveAchieve_css-style.css.map */

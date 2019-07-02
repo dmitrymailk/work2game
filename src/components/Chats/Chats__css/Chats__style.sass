@@ -1,0 +1,347 @@
+$mod64: 64px
+$mod32: 32px
+$blue: #0092FF
+$gray: #e9f0fb
+  
+@mixin center
+  display: flex
+  align-items: center
+  justify-content: center
+
+@mixin square_32
+  width: 32px
+  height: 32px
+
+@mixin square_64
+  width: $mod64
+  height: $mod64
+
+
+
+      
+
+.main-content
+  &__chats
+    width: 100%
+    height: calc(100% - 96px)
+    flex-direction: column
+    grid-template-columns: 33% 67%
+    grid-template-rows: 96px calc(100% - 64px)
+    display: grid
+
+.chats
+  &-kind
+    display: flex
+    align-items: center
+    height: 96px
+    width: 100%
+    &__add-new
+      height: 53px
+      width: 53px
+      border-radius: 50%
+      position: relative
+      margin-right: 13px
+      @include center
+      background: #ffffff
+      cursor: pointer
+      .add-new
+        &__line, &__line2
+          height: 2px
+          width: 24px
+          display: flex
+          background: $blue
+          border-radius: 4px
+          position: absolute
+        &__line2
+          transform: rotate(-90deg)  
+
+    &__item
+      height: 53px
+      width: 53px
+      display: flex
+      border-radius: 50%
+      position: relative
+      margin-right: 13px
+      align-items: center
+      opacity: .6
+      cursor: pointer
+      background: #ffffff
+      img
+        width: 100%
+        height: 100%
+      &-count
+        position: absolute
+        display: flex
+        height: 16px
+        width: 16px
+        background: #F22116
+        border-radius: 50%
+        top: 0
+        right: 0
+        @include center
+        font-size: 10px
+        font-weight: 600
+        color: #EFEFEF
+      &.active
+        opacity: 1
+      &-select
+        position: absolute
+        bottom: -10px
+        right: 20px
+        @include center
+        width: 16px
+        &-line, &-line2
+          height: 2px
+          width: 10px
+          background: $blue
+          border-radius: 4px
+        &-line
+          transform: rotate(45deg)
+          position: absolute
+          right: 0
+        &-line2
+          transform: rotate(-45deg)
+          position: absolute
+          left: 0px
+  &-left
+    grid-column: 1/1
+    height: 100%
+    background-color: #fff
+    border-radius: 15px 0 0 15px
+    &__search
+      width: 100%
+      display: flex
+      align-items: center
+      height: 48px
+      &-img
+        width: 16px
+        height: 16px
+        margin-left: 16px
+      &-input
+        outline: none
+        border: none
+        border-bottom: 1px solid #cccccc 
+        width: calc(100% - 60px)
+        margin-left: 6px
+        font-size: 13px
+        font-weight: 300
+        color: #999999
+        padding-left: 8px
+    &__messages
+      display: flex
+      grid-row-gap: 16px
+      flex-direction: column
+      height: calc(100% - 48px)
+      overflow-y: scroll
+      &::-webkit-scrollbar
+        width: 5px
+        border-radius: 3px
+      &::-webkit-scrollbar-track
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0)
+        border-radius: 3px
+      &::-webkit-scrollbar-thumb
+        background-color: #879bbd
+        outline: 1px solid slategrey
+        border-radius: 3px
+      &::-webkit-scrollbar-corner
+        border-radius: 3px
+      &-item
+        display: flex
+        width: 100%
+        height: 64px
+        position: relative
+        cursor: pointer
+        margin-top: 8px
+        border-radius: 2px
+        flex-shrink: 0
+        &.active
+          background: #eff2f8
+        &-img
+          margin: 8px 8px 0 8px
+          height: 48px
+          width: 48px
+          border-radius: 50%
+        &-text
+          margin-top: 8px
+          width: calc(100% - 120px)
+        &-time
+          position: absolute
+          right: 16px
+          top: 8px
+          font-weight: 200
+          font-size: 14px
+          color: #6e6e6e
+        &-count
+          border-radius: 4px
+          background: #e5e5e5
+          color: #ffffff
+          width: 26px
+          height: 16px
+          font-size: 12px
+          font-weight: 200
+          text-align: right
+          position: absolute
+          top: 33px
+          right: 16px
+          display: flex
+          align-items: center
+          justify-content: flex-end
+          padding-right: 3px
+
+
+  &-right
+    grid-column-start: 2
+    grid-row-start: 2
+    display: flex
+    flex-direction: column
+    // grid-template-columns: 100%
+    // grid-template-rows: 48px calc(100% - 128px)
+    width: 100%
+    height: 100%
+    background: #ffffff
+    border-radius: 0 15px 15px 0
+    &__top
+      display: flex
+      margin-bottom: 8px
+      &-img
+        margin-left: 24px
+        height: 32px
+        width: 32px
+        margin-top: 8px
+      &-text
+        margin-left: 6px
+        display: flex
+        flex-direction: column
+        margin-top: 8px
+        &-name
+          font-weight: 500
+        &-count
+          font-size: 13px
+          font-weight: 200
+          margin-top: 2px
+    &__bottom
+      background: rgba(0,0,0,.0)
+      margin-left: 16px
+      display: flex
+      height: 100%
+      position: relative
+      flex-direction: column
+      background: url('https://pp.userapi.com/c850632/v850632480/d4d2d/Ke2YZVzhnCE.jpg')
+
+      &-area
+        &::-webkit-scrollbar
+          width: 5px
+          border-radius: 3px
+        &::-webkit-scrollbar-track
+          -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0)
+          border-radius: 3px
+        &::-webkit-scrollbar-thumb
+          background-color: #879bbd
+          outline: 1px solid slategrey
+          border-radius: 3px
+        &::-webkit-scrollbar-corner
+          border-radius: 3px
+        overflow-y: scroll
+        display: flex
+        flex-direction: column
+        width: 100%
+        margin-top: 5px
+        height: calc(100% - 64px) 
+        background: rgba(0,0,0,.0)
+          
+      &-item
+        display: flex
+        flex-shrink: 0
+        min-height: 64px
+        max-width: 75%
+        min-width: 300px
+        height: auto
+        margin: 8px 0 8px 4px
+        &-img
+          background: #ffffff
+          border-radius: 50%
+          height: 32px
+          width: 32px
+        &-text
+          background: #ffffff
+          margin: 0 0 0 16px
+          position: relative
+          border-radius:  0 4px 4px 4px
+      &-send
+        height: 64px
+        width: 100%
+        display: flex
+        background-color: #65bdfd
+        position: absolute
+        border-radius: 4px 15px 15px 4px
+        bottom: 0
+        left: 0
+        align-items: center
+        &-plane
+          transform: rotate(30deg)
+          width: 28px
+          position: absolute
+          right: 14px
+          cursor: pointer
+          margin-top: 1px
+        &-file
+          width: 24px
+          margin: 0 12px
+          cursor: pointer
+        &-input
+          outline: none
+          width: calc(100% - 115px)
+          border: none
+          height: 38px
+          border-radius: 3px
+          padding-left: 16px
+          
+      
+
+
+.messages-item-text
+  &__name
+    font-size: 15px
+    font-weight: 500 
+  &__preview
+    color: #666
+    font-size: 13px
+    width: 100%
+    overflow: hidden
+    white-space: nowrap
+    margin-top: 8px
+.bottom-item-text
+  &__name
+    color: $blue
+    font-size: 16px
+    font-weight: 500
+    margin: 8px 8px 0 8px
+  &__message
+    margin-bottom: 16px
+    font-size: 16px
+    padding: 8px 8px 0 8px
+  &__triangle
+    display: flex
+    height: 16px
+    width: 16px
+    background-color: #fff
+    position: absolute
+    -webkit-clip-path: polygon(100% 0, 0 0, 100% 100%)
+    clip-path: polygon(100% 0, 0 0, 100% 100%)
+    left: -15px
+    top: 0
+    border-radius: 4px 0 4px 0
+
+
+
+
+
+
+
+
+
+   
+
+
+
+

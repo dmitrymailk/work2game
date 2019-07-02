@@ -1,0 +1,541 @@
+$mod64: 64px
+$mod32: 32px
+$blue: #0092FF
+$gray: #e9f0fb
+  
+@mixin center
+  display: flex
+  align-items: center
+  justify-content: center
+
+@mixin title
+  height: $mod64
+  display: flex
+  align-items: center
+  font-size: 24px
+
+@mixin square_32
+  width: 32px
+  height: 32px
+
+@mixin square_64
+  width: $mod64
+  height: $mod64
+
+@mixin full-spread
+  width: 100%
+  height: 100%
+
+@mixin itemWrapper
+  display: flex
+  align-items: center
+  flex-direction: column
+
+@mixin titleKind
+  height: 64px
+  width: auto
+  display: flex
+  align-items: center
+  justify-content: center
+  font-size: 19px
+  font-weight: 700
+  text-transform: uppercase
+  color: #879bbd
+  border-radius: 15px 15px 0 0
+  background-color: #e9f0fb
+  display: flex
+  flex-grow: 1
+  cursor: pointer
+  text-align: center
+@mixin titleKindActive
+  background-color: #ffffff !important
+  color: #0092ff !important
+
+  
+.main-menu
+  &__current
+    width: 3px
+    display: flex
+    background: $blue
+    height: 64px
+    position: absolute
+    left: 0
+  &__switch
+    @include center
+    flex-direction: column
+    background: $blue
+    @include square_64
+    cursor: pointer
+  &__item
+    @include square_64
+    @include center
+    margin-bottom: 30px
+    cursor: pointer
+    img
+      width: $mod32
+      height: $mod32
+  &__item:last-child
+    position: absolute
+    bottom: 26px
+    margin-bottom: 0
+  &__item:nth-child(2)
+    margin-top: 48px
+.switch
+  &__line
+    width: $mod32
+    height: 4px
+    background: #ffffff
+    display: flex
+    margin-bottom: 5px
+  &__line:last-child
+    margin-bottom: 0
+.info-bar
+  &__wrapper
+    position: absolute
+    right: 48px
+    display: flex
+  &__item
+    @include square_64
+    @include center
+    cursor: pointer
+    img
+      @include square_32
+      
+
+.main-content
+  &__profile
+    min-width: 320px
+    height: 100%
+    max-width: 340px
+    min-height: 512px
+    max-height: 512px
+  &__statistics
+    max-width: 996px
+    width: 100%
+    height: 100%
+    min-width: 696px
+    min-height: 512px
+    max-height: 512px
+    margin-left: 64px
+    
+  &__achievements
+    max-width: 320px
+    height: 100%
+    width: 100%
+    min-height: 384px
+    max-height: 512px
+    // margin-left: 128px  
+  &__activity
+    max-width: 996px
+    width: 100%
+    height: 100%
+    min-width: 696px
+    max-height: 384px !important
+    margin-left: 64px
+  &__wrapper
+    display: flex
+    width: 100%
+    justify-content: flex-start
+    align-items: flex-start
+    &:last-child
+      margin-bottom: 64px
+  
+
+
+.profile
+  &-title
+    @include title
+  &-body
+    background: #ffffff
+    height: 448px
+    border-radius: 15px 15px 4px 4px
+    &__top
+      display: flex
+      align-items: center
+      flex-direction: column
+     
+      &-avatar
+        perspective: 1000
+        position: relative
+        cursor: pointer
+        margin-top: 48px
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 166px
+        height: 166px
+        // &:hover
+        //   .profile-body__top-avatar
+        //     &-flipper
+        //       transform: rotateY(180deg)
+      &-name
+        font-size: 22px
+      &-job
+        font-size: 16px
+        font-weight: 300
+        margin-top: 9px
+    &__bottom
+      width: 100%
+      display: flex
+      margin-top: 79px
+      height: 104px
+
+      &-star, &-tasks
+        width: calc(50% - 1px)
+        height: 100%
+        display: flex
+        align-items: center
+        flex-direction: column
+        &-img
+          @include square_32
+          margin: 8px 0 8px 0
+        &-count
+          font-size: 15px
+      &-star
+        border-right: 2px solid #e5e5e5
+
+// ANIMATION
+
+.profile-body__top-avatar-flipper
+  transition: 0.6s
+  transform-style: preserve-3d
+  position: relative
+  
+.top-avatar-flipper
+  &__front
+    z-index: 2
+    left: 0
+    background: #ffffff
+    border-radius: 50%
+    height: 166px
+    width: 166px
+  &__back
+    transform: rotateY(-180deg)
+    right: 0
+    top: 0
+    position: absolute
+    background: #ffffff
+    border-radius: 50%
+    height: 166px
+    width: 166px
+    display: flex
+    align-items: center
+    justify-content: center
+    display: none
+    img
+      height: 80%
+      position: relative
+     
+
+
+
+.statistics
+  &-title
+    @include title
+  &-body
+    background: #ffffff
+    height: 448px
+    border-radius: 15px 15px 4px 4px
+    &__top
+      height: 340px
+      border-bottom: 2px solid #e5e5e5
+      display: flex
+      flex-wrap: wrap
+      &-title
+        font-size: 20px
+        margin: 16px 0 0 16px 
+        width: 100%
+      &-graph
+        width: calc(100% - 32px)
+        display: flex
+        height: 285px
+        margin-top: 24px
+    &__bottom
+      display: flex
+      justify-content: space-between
+      &-item
+        @include center
+        width: 128px
+        height: 100%
+        flex-direction: column
+        &-number
+          font-size: 24px
+          color: $blue
+          margin-top: 12px
+        &-text
+          text-align: center
+          margin-top: 10px
+
+.achievements
+  &-title
+    @include title
+  &-body
+    background: #ffffff
+    height: 320px
+    border-radius: 15px 15px 4px 4px
+    &__top
+      display: flex
+      height: $mod64
+      &-item
+        width: 50%
+        background: #e9f0fb
+        border-radius: 15px 15px 0px 0px
+        font-size: 14px
+        font-weight: 600
+        color: #879BBD
+        cursor: pointer
+        @include center
+        &.active
+          color: $blue
+          background: #ffffff
+        
+    &__bottom
+      padding: 16px 16px 0 16px
+      display: grid
+      grid-template-columns: 82px 82px 82px
+      grid-template-rows: auto
+      grid-column-gap: 18px
+      grid-row-gap: 16px
+      &-item
+        height: 82px
+        width: 82px
+        color: #879BBD
+        background: $gray
+        border-radius: 8px
+        @include center
+        font-size: 36px
+        font-weight: 600
+        cursor: pointer
+        position: relative
+        img
+          max-width: 48px
+        &-block
+          width: 100%
+          height: 100%
+          position: absolute
+          top: 0
+          left: 0
+
+// popup
+
+.achievements-body-wrapper
+  // position: relative
+  &__popup
+    background: rgba(0,0,0,0.2)
+    position: absolute
+    top: 128px
+    width: 100%
+    height: calc(100% - 64px)
+    z-index: 5
+    display: none
+    justify-content: center
+    align-items: center
+    &-area
+      width: 512px
+      height: 360px
+      display: flex
+      flex-direction: column
+      align-items: center
+      background: #ffffff
+      border-radius: 8px
+      position: relative
+      margin-top: -100px
+      &-top
+        display: flex
+        flex-direction: column
+        align-items: center
+      &-bottom
+        display: flex
+        width: calc(100% - 128px)
+        box-shadow: 0 3px 6px rgba(0,0,0,.16)
+        height: 64px
+        padding: 16px 32px
+        border-radius: 15px
+        margin-top: 16px
+      &-close
+        position: absolute
+        width: 32px
+        height: 32px
+        display: flex
+        justify-content: center
+        align-items: center
+        background-color: #0092ff
+        right: 0
+        cursor: pointer
+        top: 0
+
+
+.popup-area-top
+  display: flex
+  width: 100%
+  height: 140px
+  justify-content: center
+  align-items: center
+  flex-direction: column
+  &__name
+    margin-bottom: 20px
+    margin-top: 20px
+    font-weight: 600
+    font-size: 20px
+  &__img
+    width: 128px
+    height: 128px
+    border-radius: 15px
+    background-color: #f0f3f7
+    color: #879bbd
+    display: flex
+    align-items: center
+    justify-content: center
+    margin: 0 0 16px 0
+    img
+      width: 65%
+.popup-area-close
+  &__line
+    width: 24px
+    display: flex
+    height: 4px
+    background-color: #fff
+    transform: rotate(45deg)
+    position: absolute
+  &__line2
+    width: 24px
+    display: flex
+    height: 4px
+    background-color: #fff
+    -webkit-transform: rotate(-45deg)
+    transform: rotate(-45deg)
+    position: absolute
+
+
+.activity
+  &-title
+    @include title
+  &-body
+    background: #ffffff
+    height: 448px
+    border-radius: 15px 15px 4px 4px
+    padding: 0 32px 0 32px
+    &__top
+      display: flex
+      height: $mod64
+      align-items: center
+      &-filter
+        display: flex
+        margin-right: 16px 
+        &-select
+          width: 16px
+          height: 16px
+          background: #ffffff
+          border: 1.5px solid #c8d3e8
+          border-radius: 4px
+          margin-right: 8px
+          @include center
+          cursor: pointer
+          position: relative
+          .line-box, .line-box2
+            width: 11px
+            height: 1px
+            border-radius: 4px
+            background: $blue
+            // position: absolute
+            display: none
+          .line-box
+            transform: rotate(45deg)
+            display: none
+            position: absolute
+          .line-box2
+            transform: rotate(-45deg)
+            display: none
+        &-text
+          font-size: 14px
+          @include center
+      &-period
+        margin-left: auto 
+        width: 100px
+        height: 28px
+        border: 2px solid #C8D3E8
+        border-radius: 4px
+        display: flex
+        align-items: center
+        &-text
+          font-size: 14px
+          margin-left: 10px
+        &-arrow
+          position: relative
+          margin-left: auto 
+          cursor: pointer
+          width: 26px
+          height: 100%
+          @include center
+          .line-period, .line-period2
+            width: 10px
+            height: 1px
+            border-radius: 4px
+            background: $blue
+            
+          .line-period
+            transform: rotate(-45deg)
+            right: 10px
+            
+          .line-period2
+            transform: rotate(45deg)
+            right: 15px
+            position: absolute
+    &__bottom
+      display: flex
+      flex-direction: column
+      height: calc( 100% - 80px)
+      overflow-y: scroll
+      overflow-x: hidden
+      &-action
+        width: calc(100% - 16px)
+        min-height: 96px
+        display: flex
+        border: 2px solid #eeeeee
+        border-radius: 4px
+        position: relative
+        align-items: center
+        margin-bottom: 16px
+        &-img
+          position: absolute
+          @include square_32
+          left: 32px
+          
+        &-event
+          width: calc(100% - 376px)
+          word-wrap: break-word
+          display: flex
+          margin-left: 96px
+          position: relative
+          padding: 16px 0 16px 0
+        &-time
+          position: absolute
+          right: 16px
+          display: flex 
+
+
+// @media (min-width: 1576px)
+//   .app
+//     &__main-content
+//       justify-content: center
+
+   
+
+
+.achievements-body-wrapper
+  &__back
+    position: absolute
+    top: 8px
+    left: 0
+    width: 48px
+    cursor: pointer
+    display: none
+
+.top-filter-select
+  &__wrapper
+    width: 100%
+    height: 100%
+    position: absolute
+    z-index: 3
+
+

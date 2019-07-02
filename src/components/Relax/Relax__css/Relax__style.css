@@ -1,0 +1,284 @@
+.main-content__relaxation {
+  width: calc(100% - 64px);
+  height: calc(100% - 64px);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  left: 64px;
+  top: 64px;
+  background-repeat: no-repeat;
+  background-size: 100% 100% !important;
+  background: url("https://pp.userapi.com/c851228/v851228237/d844f/M3e4KeNaQL4.jpg");
+}
+
+.main-content__game-canvas {
+  width: calc(100% - 64px);
+  height: calc(100% - 64px);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  left: 64px;
+  top: 64px;
+  background: #000000;
+}
+
+.main-content__relax-kinds {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.video-relax-wrapper {
+  height: 100%;
+  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  background: aquamarine;
+  overflow: hidden;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.video-relax-wrapper video, .video-relax-wrapper iframe {
+  width: 200%;
+  height: 200%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  visibility: visible;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.relaxation__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  font-size: 48px;
+  font-family: 'Rubik', sans-serif;
+  color: #EDEDED;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 3;
+  margin-top: 56px;
+}
+
+.relaxation__overlay {
+  background: #000000;
+  opacity: 0.5;
+  position: absolute;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.relaxation__quotation {
+  font-size: 28px;
+  font-family: 'Rubik', sans-serif;
+  color: #EDEDED;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 3;
+  width: 100%;
+  font-weight: 300;
+  margin-top: 13px;
+  cursor: pointer;
+}
+
+.relaxation__quotation span {
+  width: 320px;
+  text-align: center;
+  line-height: 32px;
+}
+
+.relaxation__menu {
+  z-index: 3;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  cursor: pointer;
+}
+
+.relaxation__fullscreen {
+  z-index: 3;
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  cursor: pointer;
+  width: 48px;
+  height: 48px;
+  opacity: 0.6;
+}
+
+.relaxation__back {
+  z-index: 3;
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  cursor: pointer;
+  width: 48px;
+  height: 48px;
+  opacity: 0.6;
+}
+
+.relaxation__sound {
+  cursor: pointer;
+  width: 48px;
+  height: 48px;
+  opacity: 0.6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.relaxation__sound-line {
+  position: relative;
+  height: 64px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  width: 2px;
+  border-radius: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #bab9ba;
+  top: -56px;
+  left: 21px;
+  display: none;
+}
+
+.relaxation__sound-wrapper {
+  position: absolute;
+  top: 96px;
+  right: 22px;
+  z-index: 3;
+}
+
+.game-canvas__iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.game-canvas__fullscreen {
+  z-index: 3;
+  position: absolute;
+  bottom: 64px;
+  right: 16px;
+  cursor: pointer;
+  width: 48px;
+  height: 48px;
+  opacity: 0.6;
+}
+
+.game-canvas__back {
+  z-index: 4;
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  cursor: pointer;
+  width: 48px;
+  height: 48px;
+  opacity: 0.6;
+}
+
+.relax-kinds__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 48px 0 0 16px;
+}
+
+.relax-kinds__title img {
+  height: auto;
+  width: 16px;
+  margin-right: 8px;
+}
+
+.relax-kinds-bottom {
+  margin-top: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 612px;
+}
+
+.relax-kinds-bottom__item {
+  height: 96px;
+  width: 160px;
+  background-color: #c4c4c4;
+  border-radius: 4px;
+  margin-right: 16px;
+  cursor: pointer;
+  position: relative;
+}
+
+.relax-kinds-bottom__item-name {
+  font-weight: 600;
+  font-size: 16px;
+  color: #fff;
+  position: absolute;
+  z-index: 1;
+  margin: 6px 0 0 16px;
+  max-width: 140px;
+  overflow: hidden;
+  max-height: 55px;
+}
+
+.relax-kinds-bottom__item-img {
+  width: 100%;
+  height: 100%;
+  -webkit-filter: brightness(80%);
+          filter: brightness(80%);
+  border-radius: 4px;
+}
+/*# sourceMappingURL=Relax__style.css.map */

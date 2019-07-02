@@ -1,0 +1,201 @@
+$mod64: 64px
+$mod32: 32px
+$blue: #0092FF
+$gray: #e9f0fb
+  
+@mixin center
+  display: flex
+  align-items: center
+  justify-content: center
+
+
+.main-content
+  &__shop
+    width: 100%
+    height: 100%
+    flex-direction: column
+    display: flex
+
+.shop
+  &-kind
+    position: absolute
+    display: flex
+    right: 64px
+    top: 80px
+    align-items: center
+    &__item
+      display: flex
+      align-items: center
+      position: relative
+      justify-content: flex-end
+      padding: 0 0 0 32px
+      height: 32px
+      &-count
+        font-size: 18px
+        font-weight: 500
+      &-img
+        margin-left: 16px
+      &-line
+        display: flex
+        position: absolute
+        width: 2px
+        height: 16px
+        background: #c8d2e3
+        border-radius: 4px
+        left: 16px
+  &-goods
+    height: calc(100% - 128px)
+    background: #ffffff
+    border-radius: 15px 15px 4px 4px
+    margin-top: 64px
+    &__top
+      width: 100%
+      height: 64px
+      display: flex
+      &-item
+        flex-shrink: 0
+        flex-grow: 1
+        @include center
+        text-transform: uppercase
+        font-size: 18px
+        font-weight: 600
+        color: #879bbd
+        background: #e9f0fb
+        border-radius: 15px 15px 0 0
+        cursor: pointer
+        &.active
+          background: #ffffff
+          color: $blue
+    &__bottom
+      overflow-y: scroll
+      display: flex
+      flex-wrap: wrap
+      justify-content: flex-start
+      align-content: flex-start
+      margin-top: 64px
+      height: calc(100% - 138px)
+      padding: 0 32px
+      &-goods
+        display: flex
+        width: 384px
+        height: 280px
+        border: 1px solid #eeeeee
+        margin: 16px 16px 0 0
+        border-radius: 4px
+        position: relative
+        &-kind
+          font-weight: 500
+          color: $blue
+          position: absolute
+          top: 16px
+          right: 16px
+        &-img
+          width: 170px
+          max-height: 200px
+          height: auto
+          display: flex
+          border-radius: 4px
+          margin: 16px 32px 0 16px
+          img
+            width: auto 
+        &-text
+          width: 160px
+          display: flex
+          flex-direction: column
+          margin: 45px 16px 0 0
+        &-buy
+          position: absolute
+          bottom: 16px
+          right: 16px
+          width: 168px
+          height: 42px
+          display: flex
+          align-items: center
+          justify-content: center
+          border: 1px solid #0195EE
+          border-radius: 4px
+          cursor: pointer
+
+
+.bottom-goods-text
+  &__title
+    font-size: 20px
+    font-weight: 500
+    margin-bottom: 16px
+    text-align: left
+  &__desc
+    font-weight: 200
+    width: 154px
+
+.bottom-goods-buy
+  &__price
+    font-weight: 500
+    margin-right: 8px
+
+// flip effect
+
+.shop-goods__bottom-goods-img
+  perspective: 1000
+  position: relative
+  cursor: pointer
+  &:hover
+    .bottom-goods-img
+      &__flipper
+        transform: rotateY(180deg)
+        // right: 0
+        // top: 0
+  // .bottom-goods-img
+  //     &__flipper
+  //       transform-origin: 100% 100px
+        
+
+.bottom-goods-img
+  &__flipper
+    transition: 0.6s
+    transform-style: preserve-3d
+    position: relative
+    
+    &-front, &-back
+      
+      // width: 100% !important
+      
+      
+    &-front
+      z-index: 2
+      left: 0
+    &-back
+      transform: rotateY(-180deg)
+      right: 0
+      position: absolute
+      
+
+
+
+
+// .flip-container:hover .flipper, .flip-container.hover .flipper {
+// transform: rotateY(180deg);
+// }
+ 
+// .flip-container, .front, .back {
+// width: 320px;
+// height: 480px;
+// }
+// .flipper {
+// transition: 0.6s;
+// transform-style: preserve-3d;
+ 
+// position: relative;
+// }
+// .front, .back {
+// backface-visibility: hidden;
+ 
+// position: absolute;
+// top: 0;
+// left: 0;
+// }
+// .front {
+// z-index: 2;
+// }
+// .back {
+// transform: rotateY(180deg);
+// }

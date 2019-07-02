@@ -1,0 +1,811 @@
+.main-content__taskboardProj {
+  width: 100%;
+  height: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.taskboardProj-kind {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 96px;
+  border-radius: 50%;
+  width: 100%;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.taskboardProj-kind__add-new {
+  height: 53px;
+  width: 53px;
+  position: relative;
+  margin-right: 13px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #ffffff;
+  cursor: pointer;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.taskboardProj-kind__add-new .add-new__line, .taskboardProj-kind__add-new .add-new__line2 {
+  height: 2px;
+  width: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #0092FF;
+  border-radius: 4px;
+  position: absolute;
+}
+
+.taskboardProj-kind__add-new .add-new__line2 {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.taskboardProj-kind__item {
+  height: 53px;
+  width: 53px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 50%;
+  position: relative;
+  margin-right: 13px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  cursor: pointer;
+}
+
+.taskboardProj-kind__item img {
+  width: 100%;
+  border-radius: 50%;
+  height: 100%;
+}
+
+.taskboardProj-kind__item.active {
+  opacity: 1;
+}
+
+.taskboardProj-kind__item-select {
+  position: absolute;
+  bottom: -10px;
+  right: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 16px;
+}
+
+.taskboardProj-kind__item-select-line, .taskboardProj-kind__item-select-line2 {
+  height: 2px;
+  width: 10px;
+  background: #0092FF;
+  border-radius: 4px;
+}
+
+.taskboardProj-kind__item-select-line {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  position: absolute;
+  right: 0;
+}
+
+.taskboardProj-kind__item-select-line2 {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  position: absolute;
+  left: 0px;
+}
+
+.taskboardProj-kind__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: auto;
+  margin-left: 16px;
+  position: relative;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  display: none;
+}
+
+.taskboardProj-kind__info-name {
+  font-weight: 500;
+  margin-right: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.taskboardProj-kind__info-name-divide {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 1px;
+  border-radius: 4px;
+  background: #dbdee4;
+  right: -8px;
+  height: 16px;
+}
+
+.taskboardProj-kind__info-company {
+  font-weight: 600;
+  margin-right: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.taskboardProj-kind__info-company-divide {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 1px;
+  border-radius: 4px;
+  background: #dbdee4;
+  right: -8px;
+  height: 16px;
+}
+
+.taskboardProj-kind__info-access {
+  margin-right: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.taskboardProj-kind__info-access-divide {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 1px;
+  border-radius: 4px;
+  background: #dbdee4;
+  right: -8px;
+  height: 16px;
+}
+
+.taskboardProj-kind__info-access img {
+  margin-right: 8px;
+}
+
+.taskboardProj-kind__info-members {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.taskboardProj-kind__menu {
+  position: absolute;
+  right: 64px;
+  font-weight: 500;
+  cursor: pointer;
+  display: none;
+}
+
+.taskboardProj-kind__menu-circle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 6px;
+  left: -30px;
+}
+
+.taskboardProj-kind__menu-circle-1, .taskboardProj-kind__menu-circle-2, .taskboardProj-kind__menu-circle-3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+  background: #c4c4c4;
+  margin-right: 2px;
+}
+
+.taskboardProj-area {
+  height: calc(100% - 96px);
+}
+
+.taskboardProj-area__recent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.taskboardProj-area__recent-top {
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 24px 0 0 16px;
+}
+
+.taskboardProj-area__recent-top-img {
+  height: 16px;
+  width: 16px;
+  margin-right: 8px;
+}
+
+.taskboardProj-area__recent-bottom {
+  height: auto;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 612px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 16px;
+}
+
+.taskboardProj-area__recent-bottom-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 96px;
+  width: 160px;
+  background-color: #c4c4c4;
+  border-radius: 4px;
+  margin-right: 16px;
+  cursor: pointer;
+  position: relative;
+}
+
+.taskboardProj-area__personal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.taskboardProj-area__personal-top {
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 24px 0 0 16px;
+}
+
+.taskboardProj-area__personal-top-img {
+  height: 16px;
+  width: 16px;
+  margin-right: 8px;
+}
+
+.taskboardProj-area__personal-bottom {
+  height: auto;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 612px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 16px;
+}
+
+.taskboardProj-area__personal-bottom-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 96px;
+  width: 160px;
+  background-color: #c4c4c4;
+  border-radius: 4px;
+  margin: 0 16px 16px 0;
+  cursor: pointer;
+  position: relative;
+}
+
+.taskboardProj-area__personal-bottom-new {
+  height: 96px;
+  width: 160px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  margin: 0 16px 16px 0;
+  cursor: pointer;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.taskboardProj-area__unique {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.taskboardProj-area__unique-top {
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 6px 0 0 16px;
+}
+
+.taskboardProj-area__unique-top-img {
+  height: 16px;
+  width: 16px;
+  margin-right: 8px;
+}
+
+.taskboardProj-area__unique-bottom {
+  height: auto;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 612px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 16px;
+}
+
+.taskboardProj-area__unique-bottom-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 96px;
+  width: 160px;
+  background-color: #c4c4c4;
+  border-radius: 4px;
+  margin: 0 16px 16px 0;
+  cursor: pointer;
+  position: relative;
+}
+
+.taskboardProj-area__unique-bottom-new {
+  height: 96px;
+  width: 160px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  margin: 0 16px 16px 0;
+  cursor: pointer;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.taskboardProj-area__card-lists {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: calc(100% - 64px);
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-top: 16px;
+  overflow-x: scroll;
+}
+
+.taskboardProj-area__card-lists::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 3px;
+}
+
+.taskboardProj-area__card-lists::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
+  border-radius: 3px;
+}
+
+.taskboardProj-area__card-lists::-webkit-scrollbar-thumb {
+  background-color: #879bbd;
+  outline: 1px solid slategrey;
+  border-radius: 3px;
+}
+
+.taskboardProj-area__card-lists::-webkit-scrollbar-corner {
+  border-radius: 3px;
+}
+
+.taskboardProj-area__card-lists-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 275px;
+  height: auto;
+  background: #dfe3e6;
+  border-radius: 4px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-bottom: 16px;
+  margin-right: 16px;
+  max-height: 100%;
+  overflow-y: scroll;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.taskboardProj-area__card-lists-list::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 3px;
+}
+
+.taskboardProj-area__card-lists-list::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
+  border-radius: 3px;
+}
+
+.taskboardProj-area__card-lists-list::-webkit-scrollbar-thumb {
+  background-color: #879bbd;
+  outline: 1px solid slategrey;
+  border-radius: 3px;
+}
+
+.taskboardProj-area__card-lists-list::-webkit-scrollbar-corner {
+  border-radius: 3px;
+}
+
+.taskboardProj-area__card-lists-new {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 275px;
+  height: auto;
+  background: #ffffff;
+  border-radius: 4px;
+  height: 48px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  position: relative;
+}
+
+.recent-bottom-item__name {
+  font-weight: 600;
+  font-size: 16px;
+  color: #fff;
+  position: absolute;
+  z-index: 1;
+  margin: 6px 0 0 16px;
+  max-width: 140px;
+  overflow: hidden;
+  max-height: 55px;
+}
+
+.recent-bottom-item__img {
+  width: 100%;
+  height: 100%;
+  -webkit-filter: brightness(80%);
+          filter: brightness(80%);
+  border-radius: 4px;
+}
+
+.personal-bottom-item__name, .unique-bottom-item__name {
+  font-weight: 600;
+  font-size: 16px;
+  color: #fff;
+  position: absolute;
+  z-index: 1;
+  margin: 6px 0 0 16px;
+  max-width: 140px;
+  overflow: hidden;
+  max-height: 55px;
+}
+
+.personal-bottom-item__img, .unique-bottom-item__img {
+  width: 100%;
+  height: 100%;
+  -webkit-filter: brightness(80%);
+          filter: brightness(80%);
+  border-radius: 4px;
+}
+
+.personal-bottom-new__line, .personal-bottom-new__line2, .unique-bottom-new__line, .unique-bottom-new__line2 {
+  height: 2px;
+  width: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #0092FF;
+  border-radius: 4px;
+  position: absolute;
+}
+
+.personal-bottom-new__line, .unique-bottom-new__line {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.info-members__img {
+  border-radius: 50%;
+  height: 24px;
+  width: 24px;
+  margin-left: 2px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+}
+
+.info-members__new {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 24px;
+  width: 24px;
+  background: #ffffff;
+  border-radius: 50%;
+  margin-left: 2px;
+  cursor: pointer;
+}
+
+.info-members__new-line, .info-members__new-line2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 9px;
+  height: 1px;
+  background: #0092FF;
+  position: absolute;
+}
+
+.info-members__new-line {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.info-company__img {
+  height: 16px;
+  width: 16px;
+  margin-left: 8px;
+}
+
+.card-lists-list__title {
+  margin: 5px 0 0 8px;
+  font-weight: 600;
+  width: 50%;
+}
+
+.card-lists-list__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: calc(50% - 20px);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding-right: 12px;
+  height: 23px;
+  cursor: pointer;
+}
+
+.card-lists-list__menu-1, .card-lists-list__menu-2, .card-lists-list__menu-3 {
+  height: 3px;
+  width: 3px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 3px;
+  background: #9BAAB2;
+}
+
+.card-lists-list__card {
+  width: calc(100% - 24px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #fefefe;
+  margin: 16px 0 0 12px;
+  border-radius: 4px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-bottom: 9px;
+  cursor: pointer;
+}
+
+.card-lists-list__card-name {
+  margin: 8px 0 0px 8px;
+}
+
+.card-lists-list__card-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 24px;
+  width: 100%;
+  margin-left: 8px;
+}
+
+.card-lists-list__card-icons-visible {
+  margin-right: 8px;
+}
+
+.card-lists-list__card-icons-deadline {
+  margin-right: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card-lists-list__card-icons-desc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.card-lists-list__card-icons-desc-1, .card-lists-list__card-icons-desc-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 1px;
+  width: 10px;
+  background: #c4c4c4;
+  border-radius: 4px;
+}
+
+.card-lists-list__card-icons-desc-1 {
+  margin-bottom: 1px;
+}
+
+.card-lists-list__card-icons-desc-2 {
+  width: 5px;
+}
+
+.card-icons-deadline__date {
+  font-size: 12px;
+  font-weight: 200;
+  margin-left: 4px;
+}
+
+.card-lists-new {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.card-lists-new__add {
+  margin-left: 14px;
+}
+
+.card-lists-new__add-1, .card-lists-new__add-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 21px;
+  height: 2px;
+  border-radius: 4px;
+  background: #0092FF;
+  position: absolute;
+}
+
+.card-lists-new__add-1 {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.card-lists-new__text {
+  margin-left: 42px;
+}
+
+.cardListsCards__back {
+  position: absolute;
+  width: 32px;
+  cursor: pointer;
+  left: 74px;
+  top: 96px;
+}
+/*# sourceMappingURL=Tasks__style.css.map */

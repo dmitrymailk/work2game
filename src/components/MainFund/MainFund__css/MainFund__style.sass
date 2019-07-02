@@ -1,0 +1,194 @@
+$mod64: 64px
+$mod32: 32px
+$blue: #0092FF
+$gray: #e9f0fb
+  
+@mixin center
+  display: flex
+  align-items: center
+  justify-content: center
+
+@mixin title
+  height: $mod64
+  display: flex
+  align-items: center
+  font-size: 24px
+
+@mixin square_32
+  width: 32px
+  height: 32px
+
+@mixin square_64
+  width: $mod64
+  height: $mod64
+
+@mixin full-spread
+  width: 100%
+  height: 100%
+
+@mixin itemWrapper
+  display: flex
+  align-items: center
+  flex-direction: column
+
+@mixin titleKind
+  height: 64px
+  width: auto
+  display: flex
+  align-items: center
+  justify-content: center
+  font-size: 19px
+  font-weight: 700
+  text-transform: uppercase
+  color: #879bbd
+  border-radius: 15px 15px 0 0
+  background-color: #e9f0fb
+  display: flex
+  flex-grow: 1
+  cursor: pointer
+  text-align: center
+@mixin titleKindActive
+  background-color: #ffffff !important
+  color: #0092ff !important
+
+*
+ font-family: 'Roboto', sans-serif 
+ html
+   min-width: 935px
+.app
+  display: flex
+  width: 100%
+  height: 100vh
+  font-family: 'Roboto', sans-serif
+  
+  &__area-content
+    width: 100%
+    max-height: 100vh
+    max-width: calc(100vw - 64px)
+  &__main-menu
+    width: $mod64
+    height: 100%
+    display: flex
+    flex-direction: column
+    align-items: center
+  &__info-bar
+    width: 100%
+    height: $mod64
+    display: flex
+    position: relative
+  &__main-content
+    display: flex
+    width: calc(100% - 128px)
+    height: calc(100% - 64px)
+    padding: 0 64px
+    min-height: calc(100% - 64px)
+    background: #F3F7FD
+    justify-content: flex-start
+    align-content: flex-start
+    overflow-y: scroll
+    .wrapper_1
+      display: flex
+      flex-wrap: wrap
+      justify-content: flex-start
+      align-items: flex-start
+      align-content: flex-start
+      // height: 100vh
+      // display: none
+    .wrapper_2
+      width: 100%
+      // display: none
+    .wrapper_3
+      width: 100%
+      // display: none
+    .wrapper_4
+      width: 100%
+      // display: none
+    .wrapper_5
+      width: 100%
+
+    
+
+
+.main-menu
+  &__current
+    width: 3px
+    display: flex
+    background: $blue //rgba(0,0,0,0)
+    height: 64px
+    position: absolute
+    left: 0
+    // &.active
+    //   background: $blue
+      
+  &__switch
+    @include center
+    flex-direction: column
+    background: $blue
+    @include square_64
+    cursor: pointer
+  &__item
+    @include square_64
+    @include center
+    margin-bottom: 30px
+    cursor: pointer
+    img
+      width: $mod32
+      height: $mod32
+  &__item:last-child
+    position: absolute
+    bottom: 26px
+    margin-bottom: 0
+  &__item:nth-child(2)
+    margin-top: 48px
+.switch
+  &__line
+    width: $mod32
+    height: 4px
+    background: #ffffff
+    display: flex
+    margin-bottom: 5px
+  &__line:last-child
+    margin-bottom: 0
+.info-bar
+  &__wrapper
+    position: absolute
+    right: 48px
+    display: flex
+  &__item
+    @include square_64
+    @include center
+    cursor: pointer
+    img
+      @include square_32
+      
+
+.main-content
+  &__profile
+    min-width: 320px
+    height: 100%
+    max-width: 340px
+    min-height: 512px
+    max-height: 512px
+  &__statistics
+    max-width: 996px
+    width: 100%
+    height: 100%
+    min-width: 696px
+    min-height: 512px
+    max-height: 512px
+  &__achievements
+    max-width: 320px
+    height: 100%
+    width: 100%
+    min-height: 384px
+  &__activity
+    max-width: 996px
+    width: 100%
+    height: 100%
+    min-width: 696px
+    min-height: 512px
+  
+
+
+
+

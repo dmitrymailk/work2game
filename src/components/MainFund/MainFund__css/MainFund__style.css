@@ -1,0 +1,232 @@
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+* html {
+  min-width: 935px;
+}
+
+.app {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  font-family: 'Roboto', sans-serif;
+}
+
+.app__area-content {
+  width: 100%;
+  max-height: 100vh;
+  max-width: calc(100vw - 64px);
+}
+
+.app__main-menu {
+  width: 64px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.app__info-bar {
+  width: 100%;
+  height: 64px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.app__main-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: calc(100% - 128px);
+  height: calc(100% - 64px);
+  padding: 0 64px;
+  min-height: calc(100% - 64px);
+  background: #F3F7FD;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  overflow-y: scroll;
+}
+
+.app__main-content .wrapper_1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+}
+
+.app__main-content .wrapper_2 {
+  width: 100%;
+}
+
+.app__main-content .wrapper_3 {
+  width: 100%;
+}
+
+.app__main-content .wrapper_4 {
+  width: 100%;
+}
+
+.app__main-content .wrapper_5 {
+  width: 100%;
+}
+
+.main-menu__current {
+  width: 3px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #0092FF;
+  height: 64px;
+  position: absolute;
+  left: 0;
+}
+
+.main-menu__switch {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #0092FF;
+  width: 64px;
+  height: 64px;
+  cursor: pointer;
+}
+
+.main-menu__item {
+  width: 64px;
+  height: 64px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+
+.main-menu__item img {
+  width: 32px;
+  height: 32px;
+}
+
+.main-menu__item:last-child {
+  position: absolute;
+  bottom: 26px;
+  margin-bottom: 0;
+}
+
+.main-menu__item:nth-child(2) {
+  margin-top: 48px;
+}
+
+.switch__line {
+  width: 32px;
+  height: 4px;
+  background: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.switch__line:last-child {
+  margin-bottom: 0;
+}
+
+.info-bar__wrapper {
+  position: absolute;
+  right: 48px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.info-bar__item {
+  width: 64px;
+  height: 64px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+}
+
+.info-bar__item img {
+  width: 32px;
+  height: 32px;
+}
+
+.main-content__profile {
+  min-width: 320px;
+  height: 100%;
+  max-width: 340px;
+  min-height: 512px;
+  max-height: 512px;
+}
+
+.main-content__statistics {
+  max-width: 996px;
+  width: 100%;
+  height: 100%;
+  min-width: 696px;
+  min-height: 512px;
+  max-height: 512px;
+}
+
+.main-content__achievements {
+  max-width: 320px;
+  height: 100%;
+  width: 100%;
+  min-height: 384px;
+}
+
+.main-content__activity {
+  max-width: 996px;
+  width: 100%;
+  height: 100%;
+  min-width: 696px;
+  min-height: 512px;
+}
+/*# sourceMappingURL=MainFund__style.css.map */
